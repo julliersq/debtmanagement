@@ -53,7 +53,7 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                                 }
                                 if( isset($currentDesc) && trim($currentDesc) != '' ){  
                                 ?>
-                                <p><?php echo $currentDesc; ?></p>
+                                <?php echo $currentDesc; ?>
                                 <?php
                                 }
                                 ?>

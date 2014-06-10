@@ -50,10 +50,53 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                             <h2>Affiliate Program</h2>
                             <?php
                             $affiliateProgramObject = new WP_Query('name=affiliate-program&post_type=page');
-                            $affiliateProgramId = $affiliateProgramObject->post->ID;
-                            
-                            echo $affiliateProgramObject->post->post_content;
+                            $affiliateProgramId = $affiliateProgramObject->post->ID;                          
                             ?>    
+                            <?php
+                            for($i=1; $i<=10; $i++){
+                                $currentTitle = get_field('client_title'.$i);
+                                $currentTitleType = get_field('client_title_type'.$i);
+                                $currentDesc = get_field('client_desc'.$i);
+                                $currentImage = get_field('client_image'.$i);    
+                                
+                                
+                                if( trim($currentTitle) != '' ){  
+                                ?>
+                            <div class="container">
+                                <?php                  
+                                if( isset($currentImage['url']) && trim($currentImage['url']) != '' ){  
+                                ?>
+                                <img alt="" src="<?php echo $currentImage['url']; ?>" class="img-left" />
+                                <?php
+                                }
+                                if( isset($currentTitleType) && trim($currentTitleType) != '' && trim($currentTitleType) == 'blue heading' ){
+                                ?>
+                                <h4 class="p"><?php echo $currentTitle; ?></h4>
+                                <?php
+                                }
+                                else if(trim($currentTitleType) == 'red heading') {
+                                ?>
+                                <h5 class="p"><?php echo $currentTitle; ?></h5>
+                                <?php
+                                }
+                                else if(trim($currentTitleType) == 'light blue heading') {
+                                ?>
+                                <h4 class="color1 p"><?php echo $currentTitle; ?></h4>
+                                <?php  
+                                }
+                                if( isset($currentDesc) && trim($currentDesc) != '' ){  
+                                ?>
+                                <?php echo $currentDesc; ?>
+                                <?php
+                                }
+                                ?>
+                                <br  clear="all" />
+                            </div>
+                                <?php
+                                }
+                            }
+
+                            ?>                                 
                             <div class="container"><a href="/?p=<?php echo $affiliateProgramId; ?>" class="link">Read more</a></div>   
                         </div>
                     </div> 
