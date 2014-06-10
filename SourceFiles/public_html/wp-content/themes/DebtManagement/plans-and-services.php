@@ -51,18 +51,46 @@ $allPages = $pagesQuery->query(array('post_type' => 'page','posts_per_page'=>-1)
                             $creditCardDebtObject = new WP_Query( 'name=credit-card-debt-settlement&post_type=page' );                            
                             ?>
                             <h2>Credit Card Debt Settlement</h2>
+                            <?php
+                            for($i=1; $i<=10; $i++){
+                                $currentTitle = get_field('ccdebt_settlement_title'.$i);
+                                $currentImage = get_field('ccdebt_settlement_image'.$i);
+                                $currentTitleType = get_field('ccdebt_settlement_title_type'.$i);
+                                $currentDesc = get_field('ccdebt_settlement_desc'.$i);
+                                
+                                
+                                if( trim($currentTitle) != '' ){  
+                                ?>
                             <div class="container">
-                                <img alt="" src="<?php echo get_template_directory_uri(); ?>/images/2page_img1.jpg" class="img-left" />
-                                <h4 class="p">Lorem ipsum dolor sitem ametem, consectetuerum adipiscing elitum.</h4>
-                                <p>Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis partu-<br>rient montes nascetur ridiculus mus nulla dui. Fusce feugiat malesuada odio morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci acun sem Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec siten amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing.</p>
+                                <?php
+                                if( isset($currentImage['url']) && trim($currentImage['url']) != '' ){  
+                                ?>
+                                <img alt="" src="<?php echo $currentImage['url']; ?>" class="img-left" />
+                                <?php
+                                }
+                                if( isset($currentTitleType) && trim($currentTitleType) != '' && trim($currentTitleType) == 'blue heading' ){
+                                ?>
+                                <h4 class="p"><?php echo $currentTitle; ?></h4>
+                                <?php
+                                }
+                                else if(trim($currentTitleType) == 'red heading') {
+                                ?>
+                                <h5 class="p"><?php echo $currentTitle; ?></h5>
+                                <?php
+                                }
+                                if( isset($currentDesc) && trim($currentDesc) != '' ){  
+                                ?>
+                                <p><?php echo $currentDesc; ?></p>
+                                <?php
+                                }                                    
+
+                            ?>
                                 <br class="clear" />
                             </div>
-                            <div class="container">
-                                <img alt="" src="<?php echo get_template_directory_uri(); ?>/images/2page_img2.jpg" class="img-left" />
-                                <h5 class="p">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</h5>
-                                <p>Porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis partu-<br>rient montes nascetur ridiculus mus nulla dui. Fusce feugiat malesuada odio morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci acun sem Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec siten amet eros. Lorem ipsum dolor sit amet consectetuer adipiscing elit. Maurisen fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor.</p>
-                                <br class="clear" />
-                            </div>
+                                    <?php                                    
+                                }
+                            }
+                            ?>
                             <div class="container"><a href="/?p=<?php echo $creditCardDebtObject->post->ID; ?>" class="link">Read more</a></div>   
                         </div>
                     </div> 
