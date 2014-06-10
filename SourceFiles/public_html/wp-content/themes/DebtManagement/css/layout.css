@@ -1,0 +1,34 @@
+.col-1, .col-2, .col-3, .col-4{ float:left}
+/*======= width =======*/
+.main {	margin: 0 auto;	position: relative;	width: 977px; }
+
+/*======= header =======*/
+header {height:550px;  background:url(../images/top.jpg) top center no-repeat}
+
+/*======= index.html =======*/
+#page1 .col-1{ width:217px; margin-right:57px}
+#page1 .col-2{ width:412px; margin-right:66px}
+#page1 .col-3{ width:193px; margin-right:0}
+/*======= index-1.html =======*/
+#page2 .col-1{ width:227px; margin-right:44px}
+#page2 .col-2{ width:673px; margin-right:0}
+/*======= index-2.html =======*/
+#page3 .col-1{ width:690px; margin-right:60px}
+#page3 .col-2{ width:193px; margin-right:0}
+/*======= index-3.html =======*/
+#page4 .col-1{ width:217px; margin-right:57px}
+#page4 .col-2{ width:412px; margin-right:66px}
+#page4 .col-3{ width:193px; margin-right:0}
+/*======= index-4.html =======*/
+#page5 .col-1{ width:227px; margin-right:44px}
+#page5 .col-2{ width:673px; margin-right:0}
+/*======= index-5.html =======*/
+#page6 .col-1{ width:218px; margin-right:56px}
+#page6 .col-2{ width:412px; margin-right:66px}
+#page6 .col-3{ width:193px; margin-right:0}
+
+/*======= footer =======*/
+footer .col-1{ width:275px !important; margin:0 !important}
+footer .col-2{ width:127px !important; margin:0 !important}
+footer .col-3{ width:175px !important; margin:0 !important}
+footer .col-4{ width:194px !important; margin:0 !important}

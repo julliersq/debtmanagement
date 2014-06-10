@@ -1,0 +1,73 @@
+/*Debt Analysis Form*/
+#wpcf7-f8-o1{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: top;    
+    z-index: 100;
+    
+}
+
+.wpcf7-form{
+    border: medium none;
+}
+
+#wpcf7-f8-o1 .wpcf7-form p {
+    background: url("../images/bg_input3.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    display: block;
+    height: 33px;
+    margin-bottom: 4px;    
+}
+
+#wpcf7-f8-o1 .wpcf7-form p.cf7formNoBg{
+    background: none;
+}
+
+.wpcf7-form p span{
+
+}
+
+
+#wpcf7-f8-o1 .wpcf7-form p label {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    color: #90A1B2;
+    display: block;
+    font-size: 14px;
+    height: 19px;
+    left: 0;
+    padding: 4px 9px 4px 12px;
+    position: relative;
+    top: 2px;
+    width: 195px;
+}
+
+#wpcf7-f8-o1 .wpcf7-form p .cf7selectLabel{
+    font-weight: bold;
+}
+
+#wpcf7-f8-o1 .wpcf7-form p select{
+    padding: 5px 0;
+    width: 216px;
+    color: #90A1B2;
+    font-size: 14px;    
+}
+
+
+#wpcf7-f8-o1 .wpcf7-form p.cf7SubmitPar{
+    background: url("http://dm.slightred.com/wp-content/themes/DebtManagement/images/button1.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    float: right;
+    margin-top: 22px;
+    outline: medium none;
+    text-decoration: none;
+    width: 141px;    
+}
+
+#wpcf7-f8-o1 .wpcf7-form p.cf7SubmitPar input{
+    color: transparent;
+}
