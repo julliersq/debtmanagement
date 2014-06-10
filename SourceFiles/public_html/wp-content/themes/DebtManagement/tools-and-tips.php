@@ -1,6 +1,6 @@
 <?php
 /*
-  Template Name: Plans And Services Page
+  Template Name: Tools and Tips Page
  */
 
 $currentPage = get_queried_object();
@@ -25,15 +25,45 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                         $toolsAndTipsObject = new WP_Query( 'name=debt-settlement-tools-tips&post_type=page' );
                         $toolsAndTipsId = $creditScoreObject->post->ID;
                         ?>
-                        <h4 class="p">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</h4>
-                        <p>Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius micum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus nulla dui. Fusce feugiat malesuada odio morbiem nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci acun sem Duis ultricies pharetra magna. Donecumt accumsan malesuada orci. Donec siten amet eros. Lorem ipsum dolor sit amet, consectetuer.</p>
+                            <?php
+                            for($i=1; $i<=10; $i++){
+                                $currentTitle = get_field('debt_tools_title'.$i);
+                                $currentTitleType = get_field('debt_tools_title_type'.$i);
+                                $currentDesc = get_field('debt_tools_desc'.$i);
+                                
+                                
+                                if( trim($currentTitle) != '' ){  
+                                ?>
+                            <div class="container">
+                                <?php                                
+                                if( isset($currentTitleType) && trim($currentTitleType) != '' && trim($currentTitleType) == 'blue heading' ){
+                                ?>
+                                <h4 class="p"><?php echo $currentTitle; ?></h4>
+                                <?php
+                                }
+                                else if(trim($currentTitleType) == 'red heading') {
+                                ?>
+                                <h5 class="p"><?php echo $currentTitle; ?></h5>
+                                <?php
+                                }
+                                else if(trim($currentTitleType) == 'light blue heading') {
+                                ?>
+                                <h4 class="color1 p"><?php echo $currentTitle; ?></h4>
+                                <?php  
+                                }
+                                if( isset($currentDesc) && trim($currentDesc) != '' ){  
+                                ?>
+                                <p><?php echo $currentDesc; ?></p>
+                                <?php
+                                }
+                                ?>
+                                <br  clear="all" />
+                            </div>
+                                <?php
+                                }
+                            }
 
-                        <h5 class="p"> Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam nisi ut aliquid ex ea commod.</h5>
-                        <p>Vel cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus quisque nulla. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae uspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue. Nam elit magna, hendrerit sit.</p>
-
-                        <h4 class="color1 p">Ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</h4>
-                        <p> Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor siteme amet consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl. Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi, aliquet sit amet, euismod in, auctor ut, ligula. Aliquam dapibusm tincidunt metus. Praesent justo dolor, lobortis quis, lobortis dignissim, pulvinar ac, lorem. </p>
-                        
+                            ?>                        
                         <div class="container"><a href="/?p=<?php echo $toolsAndTipsId; ?>" class="link">Read more</a></div>    
                     </div>
                     <div class="col-2">
