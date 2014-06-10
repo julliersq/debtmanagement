@@ -21,6 +21,11 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                     <div class="container">
                         <div class="col-1">
                             <h2>Contact Form</h2>
+                            <?php
+                            echo do_shortcode( '[contact-form-7 id="159" title="Contact Us Form"]' );
+                            
+                            /*
+                            ?>
                             <form action="" id="form"><fieldset>
 
                                     Enter your Name:
@@ -37,6 +42,8 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                                     </div>
 
                                 </fieldset></form>
+                             * 
+                             */?>
                         </div>
                         <div class="col-2">
                             <h2>Our Locations</h2>
