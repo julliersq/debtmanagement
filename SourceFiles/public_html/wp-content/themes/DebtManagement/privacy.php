@@ -7,7 +7,7 @@ $currentPage = get_queried_object();
 
 $pageID = $currentPage->ID;
 global $bodyId;
-$bodyId = 3;
+$bodyId = 7;
 get_header();
 
 // Set up the objects needed
