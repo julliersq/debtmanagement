@@ -53,6 +53,7 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                                 <?php
                                 $childCounter=0;
                                 foreach ($creditScoreChildren as $currentCreditScoreChild) { 
+                                    $childCounter++;
                                 ?>
                                 <li <?php echo ($childCounter >= count($creditScoreChildren)) ? 'class="last"' : ''; ?>><a href="<?php echo get_site_url().'/'.$currentCreditScoreChild->post_name; ?>"><?php echo $currentCreditScoreChild->post_title; ?></a></li>
                                 <?php
