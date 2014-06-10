@@ -76,10 +76,10 @@
                         <ul class="menu">
                             <li <?php echo ($pagePostName == 'home' ) ? 'class="current"' : '' ; ?>><a href="/home"><em><b>Home</b></em></a></li>
                             <li <?php echo ($pagePostName == 'plans-services' ) ? 'class="current"' : '' ; ?>><a href="/plans-services"><em><b>Plans &amp; Services</b></em></a></li>
-                            <li <?php echo ($pagePostName == 'home' ) ? 'class="current"' : '' ; ?>><a href="index-2.html"><em><b>Tools &amp; Tips</b></em></a></li>
-                            <li <?php echo ($pagePostName == 'home' ) ? 'class="current"' : '' ; ?>><a href="index-3.html"><em><b>Questions?</b></em></a></li>
-                            <li <?php echo ($pagePostName == 'home' ) ? 'class="current"' : '' ; ?>><a href="index-4.html"><em><b>Current clients</b></em></a></li>
-                            <li <?php echo ($pagePostName == 'home' ) ? 'class="current"' : '' ; ?>><a href="index-5.html"><em><b>Contact Us</b></em></a></li>
+                            <li <?php echo ($pagePostName == 'tools-tips' ) ? 'class="current"' : '' ; ?>><a href="/tools-tips"><em><b>Tools &amp; Tips</b></em></a></li>
+                            <li <?php echo ($pagePostName == 'questions' ) ? 'class="current"' : '' ; ?>><a href="/questions"><em><b>Questions?</b></em></a></li>
+                            <li <?php echo ($pagePostName == 'current-clients' ) ? 'class="current"' : '' ; ?>><a href="/current-clients"><em><b>Current clients</b></em></a></li>
+                            <li <?php echo ($pagePostName == 'contact-us' ) ? 'class="current"' : '' ; ?>><a href="/contact-us"><em><b>Contact Us</b></em></a></li>
                         </ul>
                     </nav>
                 </div>
