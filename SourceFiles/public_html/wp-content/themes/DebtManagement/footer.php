@@ -12,7 +12,7 @@ $homePageId = $homePageObject->post->ID;
                         <div class="col-1">
                             <span>Debt settlement  <br>
                                 &amp; credit counseling</span> &copy; 2010  <br>
-                            <a href="index-6.html">Privacy policy</a> <br>
+                            <a href="/?p=155">Privacy policy</a> <br>
                             <!--{%FOOTER_LINK}-->
                         </div>
 
@@ -107,15 +107,6 @@ $homePageId = $homePageObject->post->ID;
                         endif;
                         ?>   
 
-                        <div class="col-3">
-                            <h2>Clients</h2>
-                            <ul>
-                                <li><a href="#">Nibh condimentum </a></li>
-                                <li><a href="#">Integer ac lacus</a></li>
-                                <li><a href="#">Sociis natoque </a></li>
-                                <li><a href="#">Enatibus et magnis </a></li>
-                            </ul>
-                        </div>
                         <div class="col-4">
                             <h2>Newsletter:</h2>
                             <form action="" id="Search"><fieldset>
