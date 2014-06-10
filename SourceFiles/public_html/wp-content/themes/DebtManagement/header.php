@@ -21,7 +21,7 @@
         <![endif]-->
     </head>
 
-    <body id="page1">
+    <body id="page<?php global $bodyId; echo $bodyId; ?>">
         <header>
             <div class="main">
                 <h1><a href="index.html">Hatha</a></h1>
@@ -74,8 +74,8 @@
                     ?>
                     <nav>
                         <ul class="menu">
-                            <li <?php echo ($pagePostName == 'home' ) ? 'class="current"' : '' ; ?>><a href="index.html"><em><b>Home</b></em></a></li>
-                            <li <?php echo ($pagePostName == 'home' ) ? 'class="current"' : '' ; ?>><a href="index-1.html"><em><b>Plans &amp; Services</b></em></a></li>
+                            <li <?php echo ($pagePostName == 'home' ) ? 'class="current"' : '' ; ?>><a href="/home"><em><b>Home</b></em></a></li>
+                            <li <?php echo ($pagePostName == 'plans-services' ) ? 'class="current"' : '' ; ?>><a href="/plans-services"><em><b>Plans &amp; Services</b></em></a></li>
                             <li <?php echo ($pagePostName == 'home' ) ? 'class="current"' : '' ; ?>><a href="index-2.html"><em><b>Tools &amp; Tips</b></em></a></li>
                             <li <?php echo ($pagePostName == 'home' ) ? 'class="current"' : '' ; ?>><a href="index-3.html"><em><b>Questions?</b></em></a></li>
                             <li <?php echo ($pagePostName == 'home' ) ? 'class="current"' : '' ; ?>><a href="index-4.html"><em><b>Current clients</b></em></a></li>

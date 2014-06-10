@@ -6,6 +6,9 @@ Template Name: Front Page
 $currentPage = get_queried_object();
 
 $pageID = $currentPage->ID;
+
+global $bodyId;
+$bodyId = 1;
 get_header();
 ?>
         <div class="main">
