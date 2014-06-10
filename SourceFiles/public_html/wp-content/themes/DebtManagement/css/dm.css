@@ -71,3 +71,23 @@
 #wpcf7-f8-o1 .wpcf7-form p.cf7SubmitPar input{
     color: transparent;
 }
+
+
+#wpcf7-f159-o2 .wpcf7-form p{
+    margin-bottom: 0;
+}
+
+#wpcf7-f159-o2 .wpcf7-form .wpcf7-submit{
+    border-bottom: 1px solid #40A4D3;
+    color: #40A4D3;
+    float: right;
+    font-size: 12px;
+    font-weight: 100;
+    height: 16px;
+    line-height: 16px;
+    padding: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 40px;
+    margin-top: 1px;
+}
