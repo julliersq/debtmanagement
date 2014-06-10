@@ -57,7 +57,7 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                                 <?php
                                 }
                                 ?>
-                                <br  clear="all" />
+                                
                             </div>
                                 <?php
                                 }
