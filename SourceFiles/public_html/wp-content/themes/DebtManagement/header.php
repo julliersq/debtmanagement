@@ -22,6 +22,11 @@ error_reporting(0);
         <!--[if lt IE 9]>
               <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
         <![endif]-->
+        <script type="text/javascript">
+        $(function() {
+            $('.wpmega-link-title').wrap('<em><b></b></em>');
+        });        
+        </script>
     </head>
 
     <body id="page<?php global $bodyId; echo $bodyId; ?>">
@@ -71,6 +76,7 @@ error_reporting(0);
                 
                 <div class="inside">
                     <?php
+                    /*
                     $currentPage = get_queried_object();
 
                     $pagePostName = $currentPage->post_name;                    
@@ -85,6 +91,19 @@ error_reporting(0);
                             <li <?php echo ($pagePostName == 'contact-us' ) ? 'class="current"' : '' ; ?>><a href="/contact-us"><em><b>Contact Us</b></em></a></li>
                         </ul>
                     </nav>
+                    <nav id="navigation">
+                       <?php wp_nav_menu( array( 'theme_location' => 'header-menu' , 'container' => false ) ); ?>
+                    </nav>  
+                     * 
+                     */
+                    
+                    ?>
+                    <?php 
+                    uberMenu_easyIntegrate();                    
+                    ?>
+                                              
                 </div>
+             
             </div>
+       
         </header>

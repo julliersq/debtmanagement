@@ -91,3 +91,48 @@
     width: 40px;
     margin-top: 1px;
 }
+
+
+#megaMenu ul{
+    padding-top: 20px;
+}
+#megaMenu ul li{
+    border-left: 0 none !important;
+    display: inline;
+}
+
+#megaMenu ul li a{
+    border-left: 0 none !important;
+    color: #EEEEEE;
+    font-weight: bold;
+    font-size: 12px;   
+    padding: 10px 0;
+}
+
+#megaMenu ul li:hover, #megaMenu ul li.current-menu-item{
+    background: url("../images/menu_left.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+}
+
+#megaMenu ul li a:hover, #megaMenu ul li.current-menu-item a{
+    background: url("../images/menu_bg.gif") repeat-x scroll left top rgba(0, 0, 0, 0);
+    text-decoration: none;
+}
+
+#megaMenu ul li a em, #megaMenu ul li a em{
+    font-style: normal;
+}
+#megaMenu ul li a:hover em, #megaMenu ul li.current-menu-item a em{
+    background: url("../images/menu_right.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    font-style: normal;
+    padding: 10px 0;
+}
+
+#megaMenu ul li a em b{    
+    font-weight: normal;
+    line-height: 12px;
+    padding: 8px 46px 13px 45px;
+}
+
+#megaMenu ul li a:hover em b, #megaMenu ul li.current-menu-item a em b{    
+    background: url("../images/menu_left.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+}
