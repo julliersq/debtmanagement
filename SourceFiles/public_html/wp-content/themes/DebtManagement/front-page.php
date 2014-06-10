@@ -23,7 +23,7 @@ get_header();
                                 // Set up the objects needed
                                 $pagesQuery = new WP_Query();
                                 
-                                $allPages = $pagesQuery->query(array('post_type' => 'page'));
+                                $allPages = $pagesQuery->query(array('post_type' => 'page','posts_per_page'=>-1));
 
                                 $researchDebtSettlementObject = new WP_Query( 'name=research-debt-settlement&post_type=page' );
                                 $researchDebtSettlementId = $researchDebtSettlementObject->post->ID;

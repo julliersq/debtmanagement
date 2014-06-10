@@ -12,7 +12,7 @@ get_header();
 
 // Set up the objects needed
 $pagesQuery = new WP_Query();                                
-$allPages = $pagesQuery->query(array('post_type' => 'page'));
+$allPages = $pagesQuery->query(array('post_type' => 'page','posts_per_page'=>-1));
 ?>
         <div class="main">
             <div class="inside">
@@ -47,6 +47,9 @@ $allPages = $pagesQuery->query(array('post_type' => 'page'));
                             <div class="container"><a href="/?p=<?php echo $debtReliefBenefitsId; ?>" class="link">Read more</a></div>    
                         </div>
                         <div class="col-2">
+                            <?php
+                            $creditCardDebtObject = new WP_Query( 'name=credit-card-debt-settlement&post_type=page' );                            
+                            ?>
                             <h2>Credit Card Debt Settlement</h2>
                             <div class="container">
                                 <img alt="" src="<?php echo get_template_directory_uri(); ?>/images/2page_img1.jpg" class="img-left" />
@@ -60,7 +63,7 @@ $allPages = $pagesQuery->query(array('post_type' => 'page'));
                                 <p>Porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis partu-<br>rient montes nascetur ridiculus mus nulla dui. Fusce feugiat malesuada odio morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci acun sem Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec siten amet eros. Lorem ipsum dolor sit amet consectetuer adipiscing elit. Maurisen fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor.</p>
                                 <br class="clear" />
                             </div>
-                            <div class="container"><a href="#" class="link">Read more</a></div>   
+                            <div class="container"><a href="/?p=<?php echo $creditCardDebtObject->post->ID; ?>" class="link">Read more</a></div>   
                         </div>
                     </div> 
                 </section>
