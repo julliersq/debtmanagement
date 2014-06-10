@@ -25,6 +25,17 @@ error_reporting(0);
         <script type="text/javascript">
         $(function() {
             $('.wpmega-link-title').wrap('<em><b></b></em>');
+            
+            $('#wpcf7-f8-o1 .wpcf7-form p input').each(function( index, value ) {
+                var labelString = $('#wpcf7-f8-o1 .wpcf7-form label[for="'+value.id+'"]').html();
+                $(value).attr('placeholder', labelString );
+            });
+            
+            if( $('.screen-reader-response').length > 0 && $.trim($('.screen-reader-response').html()) != '' ){
+                $('#wpcf7-f8-o1 .wpcf7-form').hide();
+            }
+            
+            $('#subscribe-email').attr('placeholder', 'Enter your email here' );
         });        
         </script>
     </head>

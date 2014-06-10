@@ -109,12 +109,20 @@ $homePageId = $homePageObject->post->ID;
 
                         <div class="col-4">
                             <h2>Newsletter:</h2>
+                            <?php
+                            /*
                             <form action="" id="Search"><fieldset>
                                     <div class="rowElem1"><input type="text" class="input" value="Enter your e-mail here" onBlur="if (this.value == '')
                                                 this.value = 'Enter your e-mail here'" onFocus="if (this.value == 'Enter your e-mail here')
                                                             this.value = ''"  /></div>
                                     <a href="#" onClick="document.getElementById('Search').submit()" class="fright"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/button.gif" /></a>
                                 </fieldset></form>
+                             * 
+                             */
+                            
+                            echo do_shortcode('[contact-form-7 id="232" title="Subscribe Form"]');
+                            ?>
+                            
                         </div>
                     </div>                
                 </div>
