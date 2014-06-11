@@ -27,7 +27,7 @@ error_reporting(0);
         ?>
         <script type="text/javascript">
         $(function() {
-            $('.wpmega-link-title').wrap('<em><b></b></em>');
+            //$('.wpmega-link-title').wrap('<em><b></b></em>');
             
             $('#wpcf7-f8-o1 .wpcf7-form p input').each(function( index, value ) {
                 var labelString = $('#wpcf7-f8-o1 .wpcf7-form label[for="'+value.id+'"]').html();
