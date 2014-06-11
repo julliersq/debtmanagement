@@ -120,24 +120,34 @@ p.cf7subscribeSubmit .wpcf7-form-control.wpcf7-submit {
     margin-top: 19px !important;
 }
 
-#megaMenu ul li a{
+#megaMenu ul#megaUber > li > a{
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
     padding: 10px 45px !important;
 }
 
-#megaMenu ul li a:hover, #megaMenu ul li.current-menu-item a{
+#megaMenu ul#megaUber > li > a:hover, #megaMenu ul#megaUber > li.current-menu-item > a{
     /*background: -moz-linear-gradient(center top , #6C7B8F, #5B6B7E) repeat scroll 0 0 rgba(0, 0, 0, 0);*/
-    background: #6c7b8f; /* Old browsers */
-    background: -moz-linear-gradient(top,  #6c7b8f 1%, #5b6b7e 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#6c7b8f), color-stop(100%,#5b6b7e)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #6c7b8f 1%,#5b6b7e 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #6c7b8f 1%,#5b6b7e 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #6c7b8f 1%,#5b6b7e 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #6c7b8f 1%,#5b6b7e 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c7b8f', endColorstr='#5b6b7e',GradientType=0 ); /* IE6-9 */
+    background: #6c7b8f;
+    background: -moz-linear-gradient(top,  #6c7b8f 1%, #5b6b7e 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#6c7b8f), color-stop(100%,#5b6b7e)); 
+    background: -webkit-linear-gradient(top,  #6c7b8f 1%,#5b6b7e 100%); 
+    background: -o-linear-gradient(top,  #6c7b8f 1%,#5b6b7e 100%); 
+    background: -ms-linear-gradient(top,  #6c7b8f 1%,#5b6b7e 100%); 
+    background: linear-gradient(to bottom,  #6c7b8f 1%,#5b6b7e 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c7b8f', endColorstr='#5b6b7e',GradientType=0 ); 
     
+}
+
+#megaMenu ul li.menu-item.ss-nav-menu-mega ul li.menu-item.ss-nav-menu-item-depth-1{
+    padding: 0 !important;
+}
+
+#megaMenu ul li.menu-item.ss-nav-menu-mega ul li.menu-item.ss-nav-menu-item-depth-1 > a{
+    padding: 11px 27px !important;
+    margin: 0 !important;
+    width: 100% !important;
 }
 /*
 #megaMenu ul{
