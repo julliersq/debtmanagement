@@ -133,5 +133,6 @@ $homePageId = $homePageObject->post->ID;
         <script type="text/javascript"> Cufon.now();</script>
     </body>
 </html>
-
- 
+<?php
+wp_footer();
+?>

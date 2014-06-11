@@ -22,6 +22,9 @@ error_reporting(0);
         <!--[if lt IE 9]>
               <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
         <![endif]-->
+        <?php
+        wp_head();
+        ?>
         <script type="text/javascript">
         $(function() {
             $('.wpmega-link-title').wrap('<em><b></b></em>');

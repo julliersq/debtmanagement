@@ -69,6 +69,11 @@
     width: 141px;    
 }
 
+#wpcf7-f8-o1 .wpcf7-form p.cf7SubmitPar input{
+    height: 28px;
+    width: 141px;  
+}
+
 #wpcf7-f8-o1 .wpcf7-form input{
     padding-top: 4px;
 }
@@ -94,8 +99,8 @@
     text-decoration: none;
     text-transform: uppercase;    
     margin-top: 1px;
-    height: 28px;
-    width: 141px;    
+    height: 16px;
+    width: 40px;    
 }
 
 .wpcf7-response-output{
@@ -111,15 +116,21 @@ p.cf7subscribeSubmit .wpcf7-form-control.wpcf7-submit {
     width: 82px;
 }
 
+#megaMenu{
+    margin-top: 10px !important;
+}
 
+/*
 #megaMenu ul{
-    padding-top: 20px;
+    padding-top: 30px;
+    
 }
 #megaMenu ul li{
     border-left: 0 none !important;
-    display: inline;
+    display: inline !important;
 }
 
+/*
 #megaMenu ul li a{
     border-left: 0 none !important;
     color: #EEEEEE;
@@ -155,3 +166,4 @@ p.cf7subscribeSubmit .wpcf7-form-control.wpcf7-submit {
 #megaMenu ul li a:hover em b, #megaMenu ul li.current-menu-item a em b{    
     background: url("../images/menu_left.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
 }
+*/
