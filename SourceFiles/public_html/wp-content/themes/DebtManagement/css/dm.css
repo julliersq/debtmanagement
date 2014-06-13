@@ -107,6 +107,10 @@
     display: none;
 }
 
+#wpcf7-f159-o2 .fright .ajax-loader{
+    float: left;
+}
+
 
 p.cf7subscribeSubmit .wpcf7-form-control.wpcf7-submit {
     background: url("/wp-content/themes/DebtManagement/images/button.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
