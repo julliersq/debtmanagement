@@ -21,7 +21,9 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                 <div class="container">
                     <div class="col-1">
                         <h2>Debt Settlement Tools &amp; Tips</h2>
+                        <?php echo $currentPage->post_content; ?>
                         <?php
+                        /*
                         $toolsAndTipsObject = new WP_Query( 'name=debt-settlement-tools-tips&post_type=page' );
                         $toolsAndTipsId = $creditScoreObject->post->ID;
                         ?>
@@ -61,7 +63,7 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                             </div>
                                 <?php
                                 }
-                            }
+                            }*/
 
                             ?>                        
                         <div class="container"><a href="/?p=<?php echo $toolsAndTipsId; ?>" class="link">Read more</a></div>    

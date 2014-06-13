@@ -48,7 +48,9 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                         </div>                        
                         <div class="col-2">
                             <h2>Affiliate Program</h2>
+                            <?php echo $currentPage->post_content; ?>
                             <?php
+                            /*
                             $affiliateProgramObject = new WP_Query('name=affiliate-program&post_type=page');
                             $affiliateProgramId = $affiliateProgramObject->post->ID;                          
                             ?>    
@@ -94,7 +96,7 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                             </div>
                                 <?php
                                 }
-                            }
+                            }*/
 
                             ?>                                 
                             <div class="container"><a href="/?p=<?php echo $affiliateProgramId; ?>" class="link">Read more</a></div>   

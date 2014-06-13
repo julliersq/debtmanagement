@@ -51,7 +51,9 @@ $allPages = $pagesQuery->query(array('post_type' => 'page','posts_per_page'=>-1)
                             $creditCardDebtObject = new WP_Query( 'name=credit-card-debt-settlement&post_type=page' );                            
                             ?>
                             <h2>Credit Card Debt Settlement</h2>
+                            <?php echo $currentPage->post_content; ?>
                             <?php
+                            /*
                             for($i=1; $i<=10; $i++){
                                 $currentTitle = get_field('ccdebt_settlement_title'.$i);
                                 $currentImage = get_field('ccdebt_settlement_image'.$i);
@@ -89,7 +91,7 @@ $allPages = $pagesQuery->query(array('post_type' => 'page','posts_per_page'=>-1)
                             </div>
                                     <?php                                    
                                 }
-                            }
+                            }*/
                             ?>
                             <div class="container"><a href="/?p=<?php echo $creditCardDebtObject->post->ID; ?>" class="link">Read more</a></div>   
                         </div>
