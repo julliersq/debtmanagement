@@ -14,6 +14,7 @@ get_header();
 $pagesQuery = new WP_Query();
 $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => -1));
 
+$db_man_theme_options = get_option('db_man_theme_options');
 ?>
         <div class="main">
             <div class="inside">
@@ -48,27 +49,30 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                         <div class="col-2">
                             <h2>Our Locations</h2>
                             <?php
-                            for($i=1; $i<=10; $i++){
-                                $currentTitle = get_field('contact_location_name'.$i);
-                                $currentTitleType = get_field('contact_location_heading_type'.$i);
-                                $currentDesc = get_field('contact_location_desc'.$i);
-                                
-                                
-                                if( trim($currentTitle) != '' ){  
-                                ?>
+                            $locationObject = new WP_Query('name=locations&post_type=page');
+                            $locationId = $locationObject->post->ID;
+                            //echo '$locationObject is '.print_r($locationObject, true);
+                            // Filter through all pages and find Portfolio's children
+                            $locationChildren = get_page_children($locationId, $allPages);
+                            
+                            $counter = 0;
+                            foreach($locationChildren as $currentLocationChild){
+                                $currentTitle = $currentLocationChild->post_title;
+                                $currentDesc = $currentLocationChild->post_content;
+                            ?>  
                             <div class="container">
                                 <?php                                
-                                if( isset($currentTitleType) && trim($currentTitleType) != '' && trim($currentTitleType) == 'blue heading' ){
+                                if( trim($currentTitle) != '' && $counter%3 == 0 ){
                                 ?>
                                 <h4 class="p"><?php echo $currentTitle; ?></h4>
                                 <?php
                                 }
-                                else if(trim($currentTitleType) == 'red heading') {
+                                else if( trim($currentTitle) != '' && $counter%3 == 1 ) {
                                 ?>
                                 <h5 class="p"><?php echo $currentTitle; ?></h5>
                                 <?php
                                 }
-                                else if(trim($currentTitleType) == 'light blue heading') {
+                                else if( trim($currentTitle) != '' && $counter%3 == 2 ) {
                                 ?>
                                 <h4 class="color1 p"><?php echo $currentTitle; ?></h4>
                                 <?php  
@@ -82,22 +86,22 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                                 <br  clear="all" />
                             </div>                            
                                 <?php
-                                }
+                                $counter++;
                             }
 
                             ?>    
                         </div>
                         <div class="col-3">
                             <h2>Contact Info</h2>
-                            <img alt="" src="images/6page_img1.jpg" class="img-indent" /><br>
-                            <h4><?php the_field('contact_desc'); ?></h4>
-                            <?php the_field('contact_company_name'); ?><br>
-                            <?php the_field('contact_address1'); ?>,<br>
-                            <?php the_field('contact_address2'); ?>
+                            <img alt="" src="/wp-content/themes/DebtManagement/images/6page_img1.jpg" class="img-indent" /><br>
+                            <h4><?php echo $db_man_theme_options['contactDesc']; ?></h4>
+                            <?php echo $db_man_theme_options['companyName']; ?><br>
+                            <?php echo $db_man_theme_options['address1']; ?>,<br>
+                            <?php echo $db_man_theme_options['address2']; ?>
                             <p class="block-contact">
-                                <span> <?php the_field('contact_freephone'); ?></span>Freephone:<br>          
-                                <span> <?php the_field('contact_telephone'); ?></span>Telephone: <br>           
-                                <span><a href="#"><strong><?php the_field('contact_email'); ?></strong></a></span>E-mail:
+                                <span> <?php echo $db_man_theme_options['freePhone']; ?></span>Freephone:<br>          
+                                <span> <?php echo $db_man_theme_options['telephone']; ?></span>Telephone: <br>           
+                                <span><a href="#"><strong><?php echo $db_man_theme_options['email']; ?></strong></a></span>E-mail:
                             </p>
                         </div>
                     </div> 

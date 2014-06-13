@@ -3,6 +3,17 @@ $homePageObject = new WP_Query( 'name=home&post_type=page' );
 $homePageId = $homePageObject->post->ID;
 
 //echo '$homePageId is '.$homePageId;
+
+$locations = get_registered_nav_menus();
+
+$menus = wp_get_nav_menus();
+
+$menu_locations = get_nav_menu_locations();
+
+
+$footerColumn2 = wp_get_nav_menu_object( $menu_locations[ 'footer-column2' ] );
+$footerColumn3 = wp_get_nav_menu_object( $menu_locations[ 'footer-column3' ] );
+$footerColumn4 = wp_get_nav_menu_object( $menu_locations[ 'footer-column4' ] );
 ?>
 
         <footer>      
@@ -16,7 +27,12 @@ $homePageId = $homePageObject->post->ID;
                             <!--{%FOOTER_LINK}-->
                         </div>
 
+                        <div class="col-2">
+                            <h2><?php echo $footerColumn2->name; ?></h2>
+                            <?php wp_nav_menu( array( 'theme_location' => 'footer-column2' , 'container' => false ) ); ?>
+                        </div>
                         <?php
+                        /*
                         // check if the repeater field has rows of data
                         if( have_rows('footer_why_us_links', $homePageId) ):
                             ?>
@@ -44,9 +60,16 @@ $homePageId = $homePageObject->post->ID;
                         else :
                             // no rows found
                         endif;
+                         * 
+                         */
                         ?>       
                         
+                        <div class="col-3">
+                            <h2><?php echo $footerColumn3->name; ?></h2>                        
+                            <?php wp_nav_menu( array( 'theme_location' => 'footer-column3' , 'container' => false ) ); ?>
+                        </div>
                         <?php
+                        /*
                         // check if the repeater field has rows of data
                         if( have_rows('footer_quick_links', $homePageId) ):
                             ?>
@@ -74,10 +97,16 @@ $homePageId = $homePageObject->post->ID;
                         else :
                             // no rows found
                         endif;
+                         * 
+                         */
                         ?>     
-                        
-                        
+
+                        <div class="col-3">
+                            <h2><?php echo $footerColumn4->name; ?></h2>                        
+                            <?php wp_nav_menu( array( 'theme_location' => 'footer-column4' , 'container' => false ) ); ?>
+                        </div>
                         <?php
+                        /*
                         // check if the repeater field has rows of data
                         if( have_rows('footer_clients', $homePageId) ):
                             ?>
@@ -105,6 +134,8 @@ $homePageId = $homePageObject->post->ID;
                         else :
                             // no rows found
                         endif;
+                         * 
+                         */
                         ?>   
 
                         <div class="col-4">
