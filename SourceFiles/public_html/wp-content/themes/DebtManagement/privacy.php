@@ -10,6 +10,8 @@ global $bodyId;
 $bodyId = 7;
 get_header();
 
+$db_man_theme_options = get_option('db_man_theme_options');
+
 // Set up the objects needed
 $pagesQuery = new WP_Query();
 $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => -1));
@@ -23,7 +25,7 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                         <div class="txt">
                             <?php echo $currentPage->post_content; ?>
                         </div>
-                        E-mail: <a href="#"><strong><?php the_field('privacy_email'); ?></strong></a>
+                        E-mail: <a href="#"><strong><?php echo $db_man_theme_options['email']; ?></strong></a>
                     </div> 
                 </section>
             </div>

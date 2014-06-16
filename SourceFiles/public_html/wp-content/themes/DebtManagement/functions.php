@@ -98,4 +98,10 @@ function email_callback() {
     $db_man_theme_options = get_option('db_man_theme_options');
     echo "<input name='db_man_theme_options[email]' type='text' value='{$db_man_theme_options['email']}' />";
 }
+
+
+add_action( 'init', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+     add_post_type_support( 'page', 'excerpt' );
+}
 ?>

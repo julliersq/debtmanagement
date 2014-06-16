@@ -27,6 +27,8 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                             //echo '$operationsConsultingObject is '.print_r($operationsConsultingObject, true);
                             // Filter through all pages and find Portfolio's children
                             $operationsConsultingChildren = get_page_children($operationsConsultingId, $allPages);
+                            
+                            if(count($operationsConsultingChildren) > 0 ){
                             ?>
                             <h4><?php echo $operationsConsultingObject->post->post_content; ?></h4>
                             <div class="p1">
@@ -42,6 +44,12 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                                     ?>
                                 </ul>
                             </div>
+                            <?php
+                            }
+                            else{
+                                echo $operationsConsultingObject->post->post_excerpt;
+                            }
+                            ?>
                             <div class="container"><a href="/?p=<?php echo $operationsConsultingId; ?>" class="link">Read more</a></div>     
                         </div>
                         <div class="col-2">
@@ -51,7 +59,8 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                             $faqId = $faqObject->post->ID;
                             //echo '$faqObject is '.print_r($faqObject, true);
                             // Filter through all pages and find Portfolio's children
-                            $faqChildren = get_page_children($faqId, $allPages);                            
+                            $faqChildren = get_page_children($faqId, $allPages);              
+                            if(count($faqChildren) > 0 ){
                             ?>
                             <div class="p1">
                                 <ol>
@@ -71,6 +80,12 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
                                     ?>
                                 </ol>
                             </div>
+                            <?php
+                            }
+                            else{
+                                echo $faqObject->post->post_excerpt;
+                            }
+                            ?>                            
                             <div class="container"><a href="/?p=<?php echo $faqId; ?>" class="link">Read more</a></div>     
                         </div>
                         <div class="col-3">

@@ -99,7 +99,7 @@ $db_man_theme_options = get_option('db_man_theme_options');
                             <?php echo $db_man_theme_options['address1']; ?>,<br>
                             <?php echo $db_man_theme_options['address2']; ?>
                             <p class="block-contact">
-                                <span> <?php echo $db_man_theme_options['freePhone']; ?></span>Freephone:<br>          
+                                <span> <?php echo $db_man_theme_options['freePhone']; ?></span>Fax:<br>          
                                 <span> <?php echo $db_man_theme_options['telephone']; ?></span>Telephone: <br>           
                                 <span><a href="#"><strong><?php echo $db_man_theme_options['email']; ?></strong></a></span>E-mail:
                             </p>

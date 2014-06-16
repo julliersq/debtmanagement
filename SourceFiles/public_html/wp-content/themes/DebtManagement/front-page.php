@@ -43,22 +43,25 @@ get_header();
                             </ul>
                         </div>
                         <div class="col-2">
-                            <h2 class="color">What we do </h2>
-                            <h3>Nunc dignissim tristique ipsum. Maecenas sagittis velit at dui. Ut orci mi semper posuere egestas sed congue tristique nibh. Ves-<br>tibulum ante ipsum primis in faucibus orci luctus et ultrices.</h3>
-                            <div class="p1">
-                                <ol>
-                                    <?php
+                            <?php
                                     $whatWeDoObject = new WP_Query( 'name=what-we-do&post_type=page' );
+                                    echo '<!-- $whatWeDoObject is '.print_r($whatWeDoObject, true).'-->';
                                     $whatWeDoId = $whatWeDoObject->post->ID;
 
                                     // Filter through all pages and find Portfolio's children
                                     $whatWeDoChildren = get_page_children( $whatWeDoId, $allPages );
 
+                            ?>
+                            <h2 class="color"><?php echo $whatWeDoObject->post->post_title; ?> </h2>
+                            <h3><?php echo $whatWeDoObject->post->post_content; ?></h3>
+                            <div class="p1">
+                                <ol>
+                                    <?php
                                     foreach($whatWeDoChildren as $currentWhatWeDoChild){
                                     ?>
                                     <li><div>
                                             <a href="<?php echo get_site_url().'/'.$currentWhatWeDoChild->post_name; ?>"><?php echo $currentWhatWeDoChild->post_title; ?></a>
-                                            <?php echo $currentWhatWeDoChild->post_content; ?>
+                                            <?php echo $currentWhatWeDoChild->post_excerpt; ?>
                                         </div>
                                     </li>
                                     <?php
