@@ -51,6 +51,8 @@ error_reporting(0);
                     <div class="fright"><a href="#">Client login  &nbsp;<img alt="" src="<?php echo get_template_directory_uri(); ?>/images/icon.gif" class="alignMiddle" /></a></div><span>CALL TOLL FREE:</span> 1-800-111-1111
                 </div>
                 <div class="block">
+                    <?php
+                    /*
                     <div class="slogan">Credit Counseling <span>helps you to:</span></div>
                     <div class="indent-block1"><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/banner1.jpg" /></a><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/banner2.jpg" /></a><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/banner3.jpg" /></a></div>
                     <ul class="list-1">
@@ -58,6 +60,11 @@ error_reporting(0);
                         <li><a href="#">Create a budget</a></li>
                         <li><a href="#">Find solutions</a></li>
                     </ul>
+                    
+                    */?>
+                    <div id="dmSliderContainer">
+                    <?php echo do_shortcode("[metaslider id=304]"); ?>
+                    </div>
                     <div class="indent-block">
                         <h2>Get Your Free Debt <br>
                             Analysis Today! </h2>  
