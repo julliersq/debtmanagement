@@ -46,7 +46,10 @@ $db_man_theme_options = get_option('db_man_theme_options');
                              * 
                              */?>
                         </div>
+                            <?php
+                            /*                        
                         <div class="col-2">
+
                             <h2>Our Locations</h2>
                             <?php
                             $locationObject = new WP_Query('name=locations&post_type=page');
@@ -89,12 +92,15 @@ $db_man_theme_options = get_option('db_man_theme_options');
                                 $counter++;
                             }
 
-                            ?>    
                         </div>
-                        <div class="col-3">
+                        
+                             */
+                            ?>    
+                        <div class="">
                             <h2>Contact Info</h2>
-                            <img alt="" src="/wp-content/themes/DebtManagement/images/6page_img1.jpg" class="img-indent" /><br>
+                            <img alt="" src="/wp-content/themes/DebtManagement/images/6page_img1.jpg" class="img-indent" /><br>                            
                             <h4><?php echo $db_man_theme_options['contactDesc']; ?></h4>
+                            <div class="col-3">
                             <?php echo $db_man_theme_options['companyName']; ?><br>
                             <?php echo $db_man_theme_options['address1']; ?>,<br>
                             <?php echo $db_man_theme_options['address2']; ?>
@@ -103,6 +109,7 @@ $db_man_theme_options = get_option('db_man_theme_options');
                                 <span> <?php echo $db_man_theme_options['telephone']; ?></span>Telephone: <br>           
                                 <span><a href="#"><strong><?php echo $db_man_theme_options['email']; ?></strong></a></span>E-mail:
                             </p>
+                            </div>
                         </div>
                     </div> 
                 </section>

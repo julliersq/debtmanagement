@@ -99,11 +99,25 @@ $footerColumn4 = wp_get_nav_menu_object( $menu_locations[ 'footer-column4' ] );
                         endif;
                          * 
                          */
+                        
                         ?>     
 
                         <div class="col-3">
-                            <h2><?php echo $footerColumn4->name; ?></h2>                        
-                            <?php wp_nav_menu( array( 'theme_location' => 'footer-column4' , 'container' => false ) ); ?>
+                           
+                            <h2><?php
+                            if( trim($footerColumn4->name) == 'hide' || trim($footerColumn4->name) == 'hidden' ){ 
+                            echo '';
+                            }
+                            else{
+                                echo $footerColumn4->name; 
+                            }?></h2>                        
+                            <?php 
+                            if( trim($footerColumn4->name) != 'hide' && trim($footerColumn4->name) != 'hidden' ){
+                                wp_nav_menu( array( 'theme_location' => 'footer-column4' , 'container' => false ) ); 
+                            }
+                            
+                            
+                            ?>
                         </div>
                         <?php
                         /*

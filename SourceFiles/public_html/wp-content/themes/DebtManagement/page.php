@@ -19,7 +19,7 @@ $allPages = $pagesQuery->query(array('post_type' => 'page', 'posts_per_page' => 
             <div class="inside">
                 <section id="content">
                     <div class="container">
-                        <h2><?php echo $currentPage->post_title; ?></h2>
+                        <h2><?php echo $currentPage->post_title; ?> <?php /*edit_post_link('[Edit Page]', '', '', $pageID); */?></h2>
                         <div class="txt">
                             <?php echo $currentPage->post_content; ?>
                         </div>                     
